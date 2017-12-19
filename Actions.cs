@@ -97,7 +97,7 @@ namespace QAChallenge
 
             wait.Until(ExpectedConditions.ElementIsVisible(By.Id("HOOK_PAYMENT")));
             checkout.BtnPayByCheck.Click();
-            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("HOOK_PAYMENT")));
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > form")));
             checkout.BtnConfirmPurchase.Click();
             Thread.Sleep(3000);
 
