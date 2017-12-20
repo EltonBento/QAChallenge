@@ -98,13 +98,35 @@ namespace QAChallenge
             wait.Until(ExpectedConditions.ElementIsVisible(By.Id("HOOK_PAYMENT")));
             checkout.BtnPayByCheck.Click();
             wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > form")));
-            checkout.BtnConfirmPurchase.Click();
-            Thread.Sleep(3000);
-
-
-            
+            checkout.BtnConfirmPurchase.Click();            
         }
 
+
+        public static void PurchaseByBankWire()
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.driver, TimeSpan.FromSeconds(60));
+
+            MyAccountPage myAcc = new MyAccountPage();
+            myAcc.MenuWomen.Click();
+
+            WomenPage wp = new WomenPage();
+            wp.Product1AddToCart.Click();
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("layer_cart")));
+            wp.ProceedToCheckout.Click();
+
+            CheckoutPages checkout = new CheckoutPages();
+            checkout.BtnSummaryCheckout.Click();
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Name("processAddress")));
+            checkout.BtnAddressCheckout.Click();
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Name("processCarrier")));
+            checkout.CheckboxTermsOfService.Click();
+            checkout.BtnShippingCheckout.Click();
+
+            wait.Until(ExpectedConditions.ElementIsVisible(By.Id("HOOK_PAYMENT")));
+            checkout.BtnPayByBankWire.Click();
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#center_column > form")));
+            checkout.BtnConfirmPurchase.Click();
+        }
 
 
 

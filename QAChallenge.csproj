@@ -67,8 +67,9 @@
     <Compile Include="Pages\MyAddress.cs" />
     <Compile Include="Pages\WomenPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scenarios\LoginFailure.cs" />
+    <Compile Include="Scenarios\TestLoginFailure.cs" />
     <Compile Include="Scenarios\TestLoginSucess.cs" />
+    <Compile Include="Scenarios\TestPurchaseByBankWire.cs" />
     <Compile Include="Scenarios\TestPurchaseByCheck.cs" />
     <Compile Include="Scenarios\TestRegistration.cs" />
   </ItemGroup>

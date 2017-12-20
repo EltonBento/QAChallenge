@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace QAChallenge.Scenarios
 {
-    class TestPurchaseByCheck
+    class TestPurchaseByBankWire
     {
-        public TestPurchaseByCheck()
+        public TestPurchaseByBankWire()
         {
                 
         }
@@ -23,11 +23,12 @@ namespace QAChallenge.Scenarios
         }
 
         [Test]
-        public void PurchaseByCheck()
+        public void PurchaseByBankWire()
         {
             Actions.LoginSucess();
-            Actions.PurchaseByCheck();
-            Assert.AreEqual(Driver.driver.FindElement(By.CssSelector("#center_column > p.alert.alert-success")).Text, "Your order on My Store is complete.");
+            Actions.PurchaseByBankWire();
+            Assert.AreEqual(Driver.driver.FindElement(By.CssSelector("#center_column > h1")).Text, "ORDER CONFIRMATION");
+
         }
 
 
@@ -36,7 +37,5 @@ namespace QAChallenge.Scenarios
         {
             Driver.driver.Quit();
         }
-
-
     }
 }
