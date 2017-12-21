@@ -14,6 +14,7 @@ namespace QAChallenge
         public static class RegistrationValues
         {
             public static string email = "teste56811@teste.com";
+            public static string NewEmail = "testeteste33@teste.com";
             public static string firstName = "Adam";
             public static string lastName = "Silva";
             public static string password = "12345#$%as";

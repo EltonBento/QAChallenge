@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace QAChallenge.Scenarios
 {
-    class TestLoginFailure
+    class TestLoginSucess
     {
 
-        public TestLoginFailure()
+        public TestLoginSucess()
         {
         }
 

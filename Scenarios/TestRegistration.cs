@@ -36,7 +36,6 @@ namespace QAChallenge.Scenarios
             myAcc.OptionMyPersonalInformation.Click();
             Assert.AreEqual(Driver.driver.FindElement(By.Id("firstname")).GetAttribute("value"), Config.RegistrationValues.firstName);
             Assert.AreEqual(Driver.driver.FindElement(By.Id("lastname")).GetAttribute("value"), Config.RegistrationValues.lastName);
-            Assert.AreEqual(Driver.driver.FindElement(By.Id("email")).GetAttribute("value"), Config.RegistrationValues.email);
         }
 
 

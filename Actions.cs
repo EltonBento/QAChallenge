@@ -32,7 +32,7 @@ namespace QAChallenge
             hp.BtnSignIn.Click();
 
             AuthenticationPage ap = new AuthenticationPage();
-            ap.Email.SendKeys(Config.RegistrationValues.email);
+            ap.Email.SendKeys(Config.RegistrationValues.NewEmail);
             ap.BtnCreateAnAccount.Click();
 
             wait.Until(ExpectedConditions.ElementExists(By.Id("account-creation_form")));
